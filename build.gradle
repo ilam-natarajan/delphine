@@ -13,8 +13,16 @@ repositories {
 dependencies {
     testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.7.1'
     testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.7.1'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.7.1'
     test.useJUnitPlatform()
     implementation 'io.rest-assured:rest-assured:4.3.3'
+    compileOnly 'org.projectlombok:lombok:1.18.18'
+    annotationProcessor 'org.projectlombok:lombok:1.18.18'
+    testCompileOnly 'org.projectlombok:lombok:1.18.18'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.18'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.2'
+    implementation 'org.hibernate.validator:hibernate-validator:7.0.1.Final'
+    implementation 'org.glassfish:jakarta.el:4.0.0'
 }
 
 test {
