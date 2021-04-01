@@ -40,3 +40,11 @@ jobs:
 
       # run tests!
       - run: gradle test
+
+      - store_artifacts:
+          path: build/reports/tests/test/
+          destination: test-reports
+
+      - store_test_results:
+          path: build/test-results
+
